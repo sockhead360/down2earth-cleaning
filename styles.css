@@ -1091,11 +1091,112 @@ img {
     font-size: 16px;
   }
 
-  .hero h1 {
-    max-width: 20rem;
-    font-size: 4.2rem;
+  /* ── Header ── */
+  .site-header {
+    grid-template-columns: 3.4rem 1fr auto;
+    min-height: 3.4rem;
+    padding: 0.3rem 0.85rem;
   }
 
+  .brand {
+    width: 3.3rem;
+    transform: none;
+  }
+
+  .menu-toggle {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+
+  .menu-toggle span:not(.sr-only) {
+    width: 1rem;
+  }
+
+  /* ── Hero ── */
+  .hero h1 {
+    max-width: 20rem;
+    font-size: 3.4rem;
+  }
+
+  /* ── Services banner — give it real height ── */
+  .services-banner {
+    min-height: 7rem;
+  }
+
+  /* ── About ── */
+  .about {
+    min-height: 22rem;
+  }
+
+  .about-copy {
+    padding-top: 9rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .about h3 {
+    font-size: 1rem;
+    margin: 0.5rem 0 0.4rem;
+  }
+
+  /* ── Display headings — reduce minimum across all pages ── */
+  .about h2,
+  .section-heading h2,
+  .first-clean-copy h2,
+  .pricing-cta h2 {
+    font-size: 2.4rem;
+  }
+
+  .contact-info h2,
+  .message-form h2 {
+    font-size: 2rem;
+  }
+
+  .contact-card h2 {
+    font-size: 2.6rem;
+  }
+
+  .team-card-copy h2,
+  .team-growth-copy h2 {
+    font-size: 2.6rem;
+  }
+
+  /* ── Section subheading ── */
+  .section-heading p {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+
+  /* ── Testimonials section ── */
+  .testimonials {
+    padding: 1.8rem 1rem 0.5rem;
+  }
+
+  .review {
+    min-height: auto;
+    padding: 1.1rem 1.2rem;
+  }
+
+  /* ── Pricing ── */
+  .rate-card strong {
+    font-size: 3.5rem;
+  }
+
+  /* ── First clean & team growth — reduce overlay padding ── */
+  .first-clean-copy {
+    padding-top: 9rem;
+  }
+
+  .team-growth-copy {
+    padding-top: 9rem;
+  }
+
+  /* ── Contact band ── */
+  .contact-band {
+    padding: 2rem 1.5rem;
+    gap: 1.5rem;
+  }
+
+  /* ── Form ── */
   .form-row {
     grid-template-columns: 1fr;
   }
