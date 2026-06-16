@@ -71,7 +71,8 @@
           </address>
         </div>
 
-        <form class="message-form contact-page-form" id="contact-form">
+        <form class="message-form contact-page-form" id="contact-form" name="contact" method="POST" data-netlify="true">
+          <input type="hidden" name="form-name" value="contact" />
           <h2>Send Us a Message</h2>
           <div class="form-row">
             <label>

@@ -17,28 +17,23 @@ document.querySelectorAll(".message-form").forEach((form) => {
   form.addEventListener("submit", (event) => {
     event.preventDefault();
 
-    if (!(form instanceof HTMLFormElement)) {
-      return;
-    }
-
-    if (!form.reportValidity()) {
-      return;
-    }
+    if (!(form instanceof HTMLFormElement)) return;
+    if (!form.reportValidity()) return;
 
     const status = form.querySelector(".form-status");
-    const subject = encodeURIComponent("Cleaning inquiry from website");
-    const body = encodeURIComponent(
-      Array.from(new FormData(form).entries())
-        .filter(([, value]) => String(value).trim() !== "")
-        .map(([key, value]) => `${key}: ${value}`)
-        .join("\n")
-    );
 
-    if (status) {
-      status.textContent = "Opening your email app with this message ready to send.";
-    }
-
-    window.location.href = `mailto:down2earthcleaningco@gmail.com?subject=${subject}&body=${body}`;
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(new FormData(form)).toString(),
+    })
+      .then(() => {
+        if (status) status.textContent = "Message sent! We'll be in touch soon.";
+        form.reset();
+      })
+      .catch(() => {
+        if (status) status.textContent = "Something went wrong. Please call us at (727) 735-5006.";
+      });
   });
 });
 
