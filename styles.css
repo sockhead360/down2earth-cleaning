@@ -231,6 +231,53 @@ img {
   object-fit: cover;
 }
 
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: #fbf3e8;
+}
+
+.service-item {
+  padding: clamp(1.5rem, 3vw, 2.5rem) clamp(1rem, 2vw, 1.5rem);
+  text-align: center;
+  border-right: 1px solid rgba(7, 81, 90, 0.1);
+}
+
+.service-item:last-child {
+  border-right: none;
+}
+
+.service-item .panel-icon {
+  margin: 0 auto 1rem;
+}
+
+.service-item h3 {
+  margin: 0 0 0.5rem;
+  color: var(--ink);
+  font-family: "Bogue Slab Medium", Georgia, serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.service-item p {
+  margin: 0;
+  font-size: 0.88rem;
+  color: #213939;
+  line-height: 1.55;
+}
+
+.service-item a {
+  color: var(--teal);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.service-item a:hover {
+  text-decoration: underline;
+}
+
 .about {
   position: relative;
   display: grid;
@@ -1026,8 +1073,18 @@ img {
   .pricing-details,
   .contact-page,
   .team-intro-copy,
-  .team-members {
+  .team-members,
+  .services-grid {
     grid-template-columns: 1fr;
+  }
+
+  .service-item {
+    border-right: none;
+    border-bottom: 1px solid rgba(7, 81, 90, 0.1);
+  }
+
+  .service-item:last-child {
+    border-bottom: none;
   }
 
   .about {
