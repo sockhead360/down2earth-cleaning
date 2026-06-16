@@ -24,7 +24,7 @@
   --gold: #f4c06c;
   --line: rgba(7, 81, 90, 0.18);
   --shadow: 0 18px 45px rgba(27, 60, 57, 0.16);
-  --display-font: "Christmas Mint", "Brush Script MT", "Segoe Script", cursive;
+  --display-font: "Cormorant Garamond", "Palatino Linotype", serif;
 }
 
 * {
@@ -41,7 +41,7 @@ body {
   background:
     radial-gradient(circle at 12% 22%, rgba(13, 108, 115, 0.08), transparent 26rem),
     linear-gradient(180deg, var(--paper-soft), var(--paper));
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "DM Sans", system-ui, sans-serif;
   font-size: 18px;
   line-height: 1.45;
 }
@@ -136,7 +136,9 @@ img {
   border: 0;
   border-radius: 999px;
   font-family: var(--display-font);
-  font-size: 1.45rem;
+  font-size: 1.6rem;
+  font-style: italic;
+  font-weight: 600;
   line-height: 1;
   text-decoration: none;
   box-shadow: 0 8px 18px rgba(6, 79, 91, 0.17);
@@ -193,7 +195,9 @@ img {
 .message-form h2 {
   margin: 0;
   font-family: var(--display-font);
-  line-height: 0.95;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.1;
   letter-spacing: 0;
 }
 
@@ -323,6 +327,8 @@ img {
   color: var(--ink);
   font-family: var(--display-font);
   font-size: 1.65rem;
+  font-style: italic;
+  font-weight: 500;
   line-height: 1;
   text-align: left;
 }
@@ -462,7 +468,9 @@ img {
   margin: 0;
   color: var(--ink);
   font-family: var(--display-font);
-  line-height: 0.95;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.1;
   letter-spacing: 0;
 }
 
@@ -703,6 +711,8 @@ img {
   display: block;
   font-family: var(--display-font);
   font-size: 2.2rem;
+  font-style: italic;
+  font-weight: 500;
   line-height: 1;
 }
 
@@ -759,7 +769,9 @@ img {
   color: var(--ink);
   font-family: var(--display-font);
   font-size: clamp(3rem, 5vw, 4.6rem);
-  line-height: 0.95;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.1;
   letter-spacing: 0;
 }
 
@@ -902,7 +914,9 @@ img {
   color: var(--ink);
   font-family: var(--display-font);
   font-size: clamp(3.1rem, 5vw, 4.8rem);
-  line-height: 0.95;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.1;
   letter-spacing: 0;
 }
 
