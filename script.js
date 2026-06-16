@@ -22,12 +22,13 @@ document.querySelectorAll(".message-form").forEach((form) => {
 
     const status = form.querySelector(".form-status");
 
-    fetch("/", {
+    fetch("/contact.html", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: new URLSearchParams(new FormData(form)).toString(),
     })
-      .then(() => {
+      .then((response) => {
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
         if (status) status.textContent = "Message sent! We'll be in touch soon.";
         form.reset();
       })
