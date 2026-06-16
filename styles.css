@@ -231,6 +231,11 @@ img {
   object-fit: cover;
 }
 
+.services-mobile-img {
+  display: none;
+  width: 100%;
+}
+
 .services-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1141,6 +1146,14 @@ img {
 
   .service-botanical {
     display: block;
+  }
+
+  .services-mobile-img {
+    display: block;
+  }
+
+  .services-grid {
+    display: none;
   }
 
   .about {
